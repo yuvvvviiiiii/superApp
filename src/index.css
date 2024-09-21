@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading{
+  font-family: "Single Day", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(114, 219, 115, 1);
+  text-align: center;
+}
+
+
+
+
+.image-container{
+  position: relative;
+  width: 50%;
+}
+
+.image{
+  max-height: 1100px;
+  min-width: 100%;
+}
+
+.quote-text {
+  position: absolute;
+  top: 60%; 
+  left: 40%;
+  transform: translate(-60%, -50%);  
+  color: white; 
+  font-size: 48px;
+  text-align: start;
+  font-weight: 600;
+  padding: 5px;
+  background-color: transparent; 
+}
