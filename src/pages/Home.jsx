@@ -1,9 +1,9 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import image from "../assets/image 13.png";
 
 export default function Home() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [data, setData] = useState({
     name: "",
@@ -63,7 +63,7 @@ export default function Home() {
         mobile: "",
         checkbox: false,
       });
-      // navigate("./selection")
+      navigate("./selection");
     }
   };
 
