@@ -93,7 +93,7 @@ export default function Selection () {
         {/* Left section */}
         <div className="mb-4 w-2/3 mr-16">
           <h1 className="heading text-8xl font-bold mb-6 heading my-10 pb-4">Super app</h1>
-          <p className="text-6xl font-semibold text-start mb-4 mr-8">Choose your entertainment <br /> category</p>
+          <p className="text-6xl font-semibold text-start mb-4 mr-8">Choose your entertainment<br />category</p>
         
 
         {/* Selected Categories */}
