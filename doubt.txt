@@ -1,0 +1,63 @@
+export default function App() {
+  const categories = [
+    { name: 'Action', color: 'bg-orange-500', image: 'action.jpg' },
+    { name: 'Drama', color: 'bg-purple-300', image: 'drama.jpg' },
+    { name: 'Romance', color: 'bg-green-500', image: 'romance.jpg' },
+    { name: 'Thriller', color: 'bg-blue-300', image: 'thriller.jpg' },
+    { name: 'Western', color: 'bg-brown-600', image: 'western.jpg' },
+    { name: 'Horror', color: 'bg-purple-500', image: 'horror.jpg' },
+    { name: 'Fantasy', color: 'bg-pink-500', image: 'fantasy.jpg' },
+    { name: 'Music', color: 'bg-red-500', image: 'music.jpg' },
+    { name: 'Fiction', color: 'bg-green-300', image: 'fiction.jpg' },
+  ];
+
+  const selectedCategories = ['Romance', 'Music', 'Action']; // Example of selected categories
+
+  return (
+    <div className="bg-black min-h-screen text-white flex justify-center items-center p-10">
+      <div className="max-w-screen-lg w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Left section */}
+        <div className="text-left">
+          <h1 className="text-4xl text-green-400 font-semibold mb-4">Super app</h1>
+          <p className="text-2xl mb-4">Choose your entertainment category</p>
+          
+          {/* Selected categories */}
+          <div className="mb-4">
+            {selectedCategories.map((category) => (
+              <div
+                key={category}
+                className="inline-flex items-center bg-green-600 text-white px-3 py-1 rounded-full mr-2 mb-2"
+              >
+                {category} <span className="ml-2 text-red-400">×</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Warning */}
+          <p className="text-red-500 flex items-center">
+            <span className="mr-1">⚠</span> Minimum 3 categories required
+          </p>
+        </div>
+
+        {/* Right section */}
+        <div className="grid grid-cols-3 gap-4">
+          {categories.map((category) => (
+            <div
+              key={category.name}
+              className={`p-4 ${category.color} rounded-lg shadow-lg text-center transition duration-300 hover:scale-105 hover:border-4 hover:border-green-400`}
+            >
+              <p className="text-xl font-semibold mb-2">{category.name}</p>
+              <img src={category.image} alt={category.name} className="rounded-md h-24 w-full object-cover" />
+            </div>
+          ))}
+        </div>
+
+        {/* Next Page Button */}
+        <div className="mt-4 text-right">
+          <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full">Next Page</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
