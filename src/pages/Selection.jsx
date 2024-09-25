@@ -98,15 +98,14 @@ export default function Selection () {
 
         {/* Selected Categories */}
         <div>
-            <div className="grid grid-cols-2 gap-x-1 md:grid-cols-2 py-8 px-3 mr-80">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-3 py-8 px-3 ml-1 w-60">
               {selectedMovies.map((category) => (
-                <p key={category.id}>
+               
                   <MovieChip
                     key={category.id}
                     category={category}
                     setSelectedMovies={setSelectedMovies}
                     />
-                </p>
               ))}
             </div>
 
@@ -119,10 +118,11 @@ export default function Selection () {
         </div>
       </div>  
       {/* Right Section */}
-      <div className="grid grid-cols-3 gap-4 mb-7"
+      <div className="grid grid-cols-3 gap-3 mb-7"
       >
         {MOVIES.map((category) => (
-          <div key={category.id}>
+          <div
+            key={category.id}>
             <MovieBox
               selectedMovies={selectedMovies}
               setSelectedMovies={setSelectedMovies}

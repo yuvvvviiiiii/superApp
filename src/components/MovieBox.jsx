@@ -15,11 +15,11 @@ const MovieBox = ( { selectedMovies, setSelectedMovies, category } ) => {
   }
 
   return (
-    <div className={`p-4 ${category.color} rounded-lg shadow-lg text-center transition duration-300 hover:scale-105 hover:border-4 hover:border-green-400`}
+    <div className={`p-4 ${category.color} rounded-lg text-center border-4 border-transparent hover:border-green-600 m-2 transition-transform transform hover:scale-105`}
       onClick={handleSelect}
     >
       <p className="text-xl font-semibold mb-2">{category.movie}</p>
-      <img src={category.imageUrl} alt={category.movie} className="rounded-md h-32 w-full object-cover" />
+      <img src={category.imageUrl} alt={category.movie} className="rounded-md h-34 w-full object-cover" />
     </div>
   )
 }
