@@ -68,18 +68,18 @@ export default function Home() {
   };
 
   return (
-      <div className="flex">
+      <div className="flex min-h-screen">
         {/* Poster Section */}
         <div className="image-container">
           <img src={image} alt="" className="image"/>
           <p className="quote-text">
-        Discover new things on Superapp
-      </p>
+            Discover new things on Superapp
+          </p>
         </div>
   
         {/* Form Section */}
         <div
-          className="w-1/2  bg-gray-950" style={{
+          className="w-1/2 min-h-screen bg-gray-950" style={{
             display: "block"
           }}>
           <div

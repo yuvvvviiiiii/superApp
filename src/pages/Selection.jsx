@@ -83,7 +83,7 @@ export default function Selection () {
     } else {
       localStorage.setItem("selectedMovies", JSON.stringify(selectedMovies));
       setSelectedMovies([]);
-      navigate('/info')
+      navigate('/carousel')
     }
   }
 
